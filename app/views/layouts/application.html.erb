@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <html lang="en">
+    <%= csrf_meta_tags %>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+    <link rel="shortcut icon" href="http://res.cloudinary.com/dzwafstu3/image/upload/v1500335476/nnpc/favicon.png" type="image/png">
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title>Welcome to NNPC Ibadan Depot Cooperative Society</title>
+      
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.carousel').carousel();
+      $('body').scrollspy({target: ".navbar", offset: 50});   
+
+      $("#myNavbar a").on('click', function(event) {
+        
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        }
+  });
+    });
+  </script>
+</html>

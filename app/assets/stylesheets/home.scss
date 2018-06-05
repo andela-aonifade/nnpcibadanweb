@@ -1,0 +1,90 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+ div > div:target {
+  /*border:1px solid #dac89d;*/
+  -webkit-animation-name:target;
+  -webkit-animation-duration:.5s;
+  -webkit-animation-iteration-count:1;
+  -webkit-animation-direction:linear;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+.targetlocation{
+  padding: 20px;
+}
+
+.fixed-top{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  opacity: 0.8;
+}
+
+.text-shadow-1{
+  text-shadow: 2px 2px 4px #000000;
+}
+.text-shadow-2{
+  text-shadow: 5px 5px 10px #000000;
+}
+.text-shadow-white-1{
+  text-shadow: 2px 2px 4px #ffffff;
+}
+.text-shadow-white-2{
+  text-shadow: 5px 5px 10px #ffffff;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
